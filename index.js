@@ -15,7 +15,7 @@ module.exports = (function(){
 	        _params = {};
 	      }
 
-	      var view_path = '_fti/local/' + db_name + '/_design/' + _design_doc + '/'  + _view_name;
+	      var view_path = config.fragment + '/local/' + db_name + '/_design/' + _design_doc + '/'  + _view_name;
 	      console.log(view_path);
 
 	      var req = {
