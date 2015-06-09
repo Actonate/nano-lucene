@@ -1,0 +1,31 @@
+{
+  "name": "nano-lucene",
+  "version": "1.0.0",
+  "description": "couchdb-lucene plugin for nano",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Actonate/nano-lucene"
+  },
+  "keywords": [
+    "couchdb-lucene",
+    "node",
+    "lucene",
+    "nano",
+    "nano",
+    "couchdb",
+    "lucene"
+  ],
+  "author": "Shoaib Merchant",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Actonate/nano-lucene/issues"
+  },
+  "homepage": "https://github.com/Actonate/nano-lucene",
+  "devDependencies": {
+    "nano": "^6.1.3"
+  }
+}
