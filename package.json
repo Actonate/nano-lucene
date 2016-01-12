@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/Actonate/nano-lucene",
   "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-release": "^0.13.0",
     "nano": "^6.1.3"
   }
 }
