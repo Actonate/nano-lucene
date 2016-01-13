@@ -1,6 +1,6 @@
 {
   "name": "nano-lucene",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "couchdb-lucene plugin for nano",
   "main": "index.js",
   "scripts": {
