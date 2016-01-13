@@ -20,8 +20,6 @@ var lucene = function(nanoAdapter, options) {
       throw new Error('Required Options: View Name');
     }
 
-    var queryString = options.queryString ? options.queryString : '';
-
     var targetDatabase = options.db ? options.db : database;
 
     if (!targetDatabase) {
@@ -35,10 +33,10 @@ var lucene = function(nanoAdapter, options) {
       uri: viewPath,
       method: 'GET',
       path: viewPath,
-      qs: queryString
+      qs: options
     };
 
-    return nano.relax(req, _callback);
+    return nano.relax(req, callback);
   };
 
   return {
