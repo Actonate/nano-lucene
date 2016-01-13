@@ -6,10 +6,10 @@ var lucene = function(nanoAdapter, options) {
   var database = options && options.db ? options.db : null;
   var fragment = options && options.fragment ? options.fragment : '_fti';
 
-  var _search = function(designDoc, viewName, options, callback) {
+  var _search = function(designDoc, viewName, requestParams, callback) {
 
-    if (!options) {
-      throw new Error('Required Options: Design Doc and View');
+    if (!requestParams) {
+      throw new Error('Required Request Parameters');
     }
 
     if (!designDoc) {
@@ -20,20 +20,14 @@ var lucene = function(nanoAdapter, options) {
       throw new Error('Required Options: View Name');
     }
 
-    var targetDatabase = options.db ? options.db : database;
-
-    if (!targetDatabase) {
-      throw new Error('Required: Database Name at Init or Search');
-    }
-
-    var viewPath = fragment + '/local/' + targetDatabase + '/_design/' +
+    var viewPath = fragment + '/local/' + database + '/_design/' +
       designDoc + '/' + viewName;
 
     var req = {
       uri: viewPath,
       method: 'GET',
       path: viewPath,
-      qs: options
+      qs: requestParams
     };
 
     return nano.relax(req, callback);
